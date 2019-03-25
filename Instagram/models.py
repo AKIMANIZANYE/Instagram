@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Profile(models.Model):
@@ -9,10 +10,11 @@ class Profile(models.Model):
      bio=models.CharField(max_length=50)  
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'insta/')
+    image = models.ImageField(upload_to = 'insta/', blank=True)
     name = models.CharField(max_length =30)
     image_Caption = models.CharField(max_length=50)
-    Profile = models.ForeignKey(Profile)
+    post = HTMLField()
+    Profile = models.ForeignKey(Profile,User,on_delete=models.CASCADE)
     likes = models.CharField(max_length=40)
     Comments = models.CharField(max_length=60)
 
