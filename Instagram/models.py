@@ -14,7 +14,7 @@ class Image(models.Model):
     name = models.CharField(max_length =30)
     image_Caption = models.CharField(max_length=50)
     post = HTMLField()
-    Profile = models.ForeignKey(Profile,User,on_delete=models.CASCADE)
+    Profile = models.ForeignKey(Profile,on_delete=models.CASCADE)
     likes = models.CharField(max_length=40)
     Comments = models.CharField(max_length=60)
 
