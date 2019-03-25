@@ -1,0 +1,63 @@
+{%extends 'all-photos/base.html'%}
+{% block content %} 
+{{block.super}}
+  
+  <div class="container" style="background:lightskyblue" >
+    <div class="jumbotron" style="background:lightseagreen">
+      <h1 style="color:burlywood;font-size: 30px" class="text-center">Photo Gallery</h1>
+      </div>
+    
+    <div class="row">
+        {% for image in images %}
+       <div class="col-md-3">
+          <a href="" data-toggle="modal" data-target="#{{image.id}}">  <h4 class="modal-title text-center">{{image.name}}</h4> <img src="{{image.Instagram.url}}" class="img-responsive responsive img-holder" alt="Image"  ></a>
+
+            <div id="{{image.id}}" class="modal fade" role="dialog">
+               <div class="modal-dialog modal-lg modal-dialog-centered">
+
+                 <div class="modal-content">
+                  <div class="modal-header">
+             
+             
+                    <img src="{{image.photo.url}}" alt="" id='myImg' height="450" width="600">
+                 </div>
+                 <div class="modal-body">
+             
+                   <h4 class="modal-title text-center">{{image.name}}</h4>
+              
+                   <p>name:{{image.name}}</p>
+                   <p> image_caption:{{image.image_caption}} </p>
+                   <button class="btn btn-danger" onclick="copyUrl('{{image.id}}-url')">Copy Image Url</button>
+                   <input class="form-control input-lg" type="text"  value="http://127.0.0.1:8000{{image.Instagram.url}}" id="{{image.id}}-url" >
+
+                 </div>
+          
+                   <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal"> skip</button>
+                   </div>
+                </div>
+      
+            </div>
+      </div>
+      <script type="text/javascript">
+        function copyUrl(element){
+          var myVar = document.getElementById(element);
+          myVar.select();
+          document.execCommand('copy');
+          alert("Copied the link of image: " + myVar.value);  
+        }
+      </script>
+      </div>
+
+     {% empty %}
+      <div class="row">
+       <h2 class="text-center"> there is no image</h2>
+      </div>
+     {% endfor %}
+
+
+ 
+    </div>
+  </div>
+{% endblock %}
+
