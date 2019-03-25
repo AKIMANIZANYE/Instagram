@@ -10,7 +10,7 @@ class Profile(models.Model):
      bio=models.CharField(max_length=50)  
 
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'insta/', blank=True)
+    image = models.ImageField(upload_to = 'pics/', blank=True)
     name = models.CharField(max_length =30)
     image_Caption = models.CharField(max_length=50)
     post = HTMLField()
