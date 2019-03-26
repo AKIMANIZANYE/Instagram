@@ -4,8 +4,8 @@ from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
-from .models import Profile, Image, Comment, Follow, Unfollow, Likes
-from . forms import ProfileUploadForm,CommentForm,ProfileForm,ImageForm,ImageUploadForm
+# from .models import Profile, Image, Comment, Follow, Unfollow, Likes
+# from . forms import ProfileUploadForm,CommentForm,ProfileForm,ImageForm,ImageUploadForm
 from django.conf import settings
 
 class Profile(models.Model):
