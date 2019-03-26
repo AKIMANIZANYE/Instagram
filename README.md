@@ -5,7 +5,7 @@
 
 
 ## Descrption of the project
-This is project bwuld  within  Django app for creating and managing photos and photo galleries, but with a PostgreSQL twist. It was made to show off some of the advanced PostgreSQL features,  administror  can be able to  add another  image add location and category
+This is project build  within  Django app for creating and managing photos  instagram, but with a PostgreSQL twist. It was made to show off some of the advanced PostgreSQL features,  administror  can be able to  upload image and add an caption. 
 
 ## installation steps
 $ git clone 
