@@ -20,7 +20,9 @@
             color: #d9534f;
         }
     </style>
-    {% block css %}{% endblock css %}
+    {% block css %}
+    {% bootstrap_css %}
+    {% endblock css %}
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -38,9 +40,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                         <li><a href="{{ user.get_absolute_url }}">{{ user.username }}</a></li>
-                        <li><a href="{% url 'posts:create' %}">Create Post</a></li>
+                        <li><a href="posts/create">Create Post</a></li>
                         <li><a href="accounts:user_list">List of Users</a></li>
-                        <li><a href="/accounts/logout">Logout</a></li>
+                        <li><a href="/accounts">Logout</a></li>
                     {% else %}
                         <li><a href="/accounts/login">Login</a></li>
                         <li><a href="/accounts/register">Signup</a></li>
