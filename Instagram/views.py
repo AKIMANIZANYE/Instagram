@@ -86,3 +86,24 @@ def new_image(request):
     else:
         form = NewImageForm()
     return render(request, 'new_image.html', {"form": form,"current_user":current_user,"title":title})
+    
+@login_required(login_url='/accounts/login/')
+def comment(request,id):
+	
+	post = get_object_or_404(Image,id=id)	
+	current_user = request.user
+	print(post)
+
+	if request.method == 'POST':
+		form = CommentForm(request.POST)
+
+		if form.is_valid():
+			comment = form.save(commit=False)
+			comment.user = current_user
+			comment.image = post
+			comment.save()
+			return redirect('index')
+	else:
+		form = CommentForm()
+
+	return render(request,'comment.html',{"form":form})      
