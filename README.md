@@ -13,6 +13,16 @@ $ cd instagram
 $ source virtual/bin/activate
 Inside the manage.py module change 
 ## Instrcuction
+Singup or create an account
+got to navigation bar
+click upload image
+add thename of image add caption 
+upload image
+post
+you can also sign in
+and do the same process.
+
+
 
 ## Test Driven Development -TDD
 Users can view different photos that they like.
