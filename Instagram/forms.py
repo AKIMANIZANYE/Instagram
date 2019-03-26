@@ -1,13 +1,20 @@
 from django import forms
-from .models import Image
+from .models import Image,profile
 
-class NewsPicturesForm(forms.ModelForm):
-     class Meta:
+class PhotosLetterForm(forms.Form):
+    name = forms.CharField(label='First Name',max_length=30)
+    email = forms.EmailField(label='Email')
+
+class NewImageForm(forms.ModelForm):
+    class Meta:
         model = Image
-        exclude = ['editor', 'pub_date']
-        widgets = {
-            'tags': forms.CheckboxSelectMultiple(),
-        }
-     your_name = forms.CharField(label='First Name',max_length=30)
-     your_location = forms.CharField(label='Location',max_length=30)
-     
+        exclude = ['user']
+        # widgets = {
+        #     'profile': forms.CheckboxSelectMultiple(),
+        # }
+class ProfileForm(forms.ModelForm):
+	model = Profile
+	username = forms.CharField(label='Username',max_length = 30)
+	
+	bio = forms.CharField(label='Image Caption',max_length=500)
+	image = forms.ImageField(label = 'Image Field')
