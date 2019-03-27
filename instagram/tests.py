@@ -16,6 +16,9 @@ class ImageTestClass(TestCase):
         self.wecode.save_image()
         caption= Image.objects.all()
         self.assertTrue(len(caption) > 0)
+
+  
+       
 class CommentTestClass(TestCase):
     # Set up method
     def setUp(self):
@@ -24,11 +27,7 @@ class CommentTestClass(TestCase):
     def test_instance(self):
         self.assertTrue(isinstance(self.wecode,Comment))
 
-    # Testing Save Method
-    # def test_save_method(self):
-    #     self.wecode.save_comment()
-    #     comment = Comment.objects.all()
-    #     self.assertTrue(len(Comment) > 0)
+   
 class ProfileTestClass(TestCase):
     # Set up method
     def setUp(self):

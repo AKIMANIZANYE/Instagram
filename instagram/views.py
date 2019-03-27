@@ -107,3 +107,4 @@ def comment(request, id):
 		form = CommentForm()
 
 	return render(request, 'comment.html',  {"form":form})
+
