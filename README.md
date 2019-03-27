@@ -1,5 +1,7 @@
 ## project name:Instagram
- Author: Claudine Akimanizanye <akimanizanye.claudine@gmail.com>, https://github.com/AKIMANIZANYE/Instagram.git
+ ## Author: Claudine Akimanizanye 
+ <akimanizanye.claudine@gmail.com>, https://github.com/AKIMANIZANYE/Instagram.git and link for heruku:https://instagramcl.herokuapp.com
+ 
  Date:   Fri Mar 22 15:58:24 2019 +0200
 
 
@@ -43,7 +45,7 @@ Django
 Boostrap
 
 ## contact
-Emails:akimanizanyeclaudine@gmail.com Phone:098766544 Emails:akimanizanyeclaudine@akilahinstitute.org Repositority:https://github.com/AKIMANIZANYE/Instagram.git amd thelink of the heroku : 
+Emails:akimanizanyeclaudine@gmail.com Phone:098766544 Emails:akimanizanyeclaudine@akilahinstitute.org Repositority:https://github.com/AKIMANIZANYE/Instagram.git amd thelink of the heroku : https://instagramcl.herokuapp.com
 # #License and Copyright
 
 .Permision of reading code     .You are not allowed to edit any file
